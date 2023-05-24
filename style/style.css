@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
+:root {
+    --bg-primary: #faf9ff;
+    --border-secondary: #3a3958;
+    --bg-secondary: #343353;
+    --color-primary: #343353;
+    --color-secondary: #f5f5f6;
+    --effect-color: #ffd15b;
+    --color-info: #838da2;
+
+    --red: #fe4b60;
+    --yellow: #ffd05c;
+    --purple: #5858e2;
+}
+
+.active-nav-link {
+    color: var(--effect-color);
+}
