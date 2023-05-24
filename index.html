@@ -8,6 +8,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./style/swiper.css">
     <title>Neeraj Walia - Portfolio</title>
     <style type="text/tailwindcss">
         @layer utilities {
@@ -39,7 +41,7 @@
     <!-- Hero section -->
     <section
         class="h-96 flex flex-col gap-4 items-center justify-center bg-[var(--bg-secondary)] text-[var(--color-secondary)]">
-        <img src="" class="h-16 w-16 rounded-full bg-[var(--effect-color)]" />
+        <img src="./assets/profile.png" class="h-16 w-16 rounded-full bg-[var(--effect-color)]" />
         <h2 class="text-2xl font-medium">Neeraj Walia
             <div class="text-xs font-thin">I'm a full stack developer</div>
         </h2>
@@ -52,14 +54,15 @@
     </section>
 
     <!-- Container -->
-    <div class="flex flex-col gap-6 container mx-auto">
+    <div class="flex flex-col gap-14 container mx-auto">
 
         <!-- About me -->
-        <section class="flex flex-col gap-6 mt-6">
+        <section class="flex flex-col gap-6 mt-10">
             <h2 class="text-xl font-bold">About Me</h2>
             <div class="flex gap-6">
-                <img src="" class="h-16 w-16 rounded-full bg-[var(--bg-secondary)]" />
-                <div class="flex-1 shadow-lg flex bg-white rounded-lg text-[var(--color-info)] text-xs gap-6 p-6">
+                <img src="./assets/profile.png" class="h-16 w-16 rounded-full bg-[var(--bg-secondary)]" />
+                <div
+                    class="flex-1 shadow-lg flex bg-[var(--bg-container-primary)] rounded-lg text-[var(--color-info)] text-xs gap-6 p-6">
                     <div class="flex flex-1 flex-col">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sequi et reprehenderit, natus,
                         mollitia consequuntur debitis, placeat sunt sed voluptates ad fugit expedita eius id iste
@@ -144,8 +147,189 @@
                 job?<span class="cursor-pointer text-[var(--red)]">&nbsp;Click here&nbsp;</span>to contact
                 me!</span>
         </section>
-    </div>
 
+        <!-- Experience -->
+        <section>
+            <h2 class="text-xl font-bold">Experience</h2>
+            <div class="flex mt-6 gap-4 text-[var(--color-primary)]">
+                <div class="flex flex-col flex-1 gap-2 bg-[var(--bg-container-primary)] rounded-lg shadow-lg p-6">
+                    <div class="flex gap-6">
+                        <div class="flex flex-col text-[var(--red)] items-center">
+                            <i class="uil uil-graduation-cap"></i>
+                            <div class="h-32 w-[0.5px] bg-[var(--red)]"></div>
+                        </div>
+                        <div class="flex flex-col text-[var(--color-primary)] text-sm gap-2">
+                            <div class="text-xs">2019 - present</div>
+                            <h2 class="text-lg font-bold">Academic Degree</h2>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem earum odio nobis
+                            ullam doloremque, voluptates ducimus ea, quis neque consequatur velit quaerat maiores
+                            sapiente quia unde sequi. Quisquam, tenetur unde!
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <div class="flex flex-col text-[var(--red)] items-center">
+                            <i class="uil uil-graduation-cap"></i>
+                            <div class="h-32 w-[0.5px] bg-[var(--red)]"></div>
+                        </div>
+                        <div class="flex flex-col text-sm gap-2">
+                            <div class="text-xs">2019 - present</div>
+                            <h2 class="text-lg font-bold">Academic Degree</h2>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem earum odio nobis
+                            ullam doloremque, voluptates ducimus ea, quis neque consequatur velit quaerat maiores
+                            sapiente quia unde sequi. Quisquam, tenetur unde!
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col flex-1 bg-[var(--bg-container-primary)] rounded-lg shadow-lg p-6">
+                    <div class="flex gap-6">
+                        <div class="flex flex-col text-[var(--red)] items-center">
+                            <i class="uil uil-window"></i>
+                            <div class="h-32 w-[0.5px] bg-[var(--red)]"></div>
+                        </div>
+                        <div class="flex flex-col text-sm gap-2">
+                            <div class="text-xs">2019 - present</div>
+                            <h2 class="text-lg font-bold">Web Developer</h2>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem earum odio nobis
+                            ullam doloremque, voluptates ducimus ea, quis neque consequatur velit quaerat maiores
+                            sapiente quia unde sequi. Quisquam, tenetur unde!
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <div class="flex flex-col text-[var(--red)] items-center">
+                            <i class="uil uil-window"></i>
+                            <div class="h-32 w-[0.5px] bg-[var(--red)]"></div>
+                        </div>
+                        <div class="flex flex-col text-sm gap-2">
+                            <div class="text-xs">2019 - present</div>
+                            <h2 class="text-lg font-bold">Web Developer</h2>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem earum odio nobis
+                            ullam doloremque, voluptates ducimus ea, quis neque consequatur velit quaerat maiores
+                            sapiente quia unde sequi. Quisquam, tenetur unde!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Works -->
+        <section>
+            <h2 class="text-xl font-bold">Recent Works</h2>
+            <div class="flex mt-6 gap-4 text-[var(--color-primary)]">
+                <div class="grid w-full grid-cols-4 gap-4">
+                    <div class="bg-gray-200 p-4 rounded-md shadow">Column 1</div>
+                    <div class="bg-gray-200 p-4 rounded-md shadow">Column 2</div>
+                    <div class="bg-gray-200 p-4 rounded-md shadow">Column 3</div>
+                    <div class="bg-gray-200 p-4 rounded-md shadow">Column 4</div>
+                    <div class="bg-gray-200 p-4 rounded-md shadow">Column 5</div>
+                    <div class="bg-gray-200 p-4 rounded-md shadow">Column 6</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Client Reviews -->
+        <section>
+            <h2 class="text-xl font-bold">Clients & Reviews</h2>
+            <div class="flex mt-6 gap-4 text-[var(--color-primary)]">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper pb-8">
+                        <div class="swiper-slide">
+                            <div class="flex flex-col gap-4 items-center justify-center">
+                                <img src="./assets/profile.png"
+                                    class="h-16 w-16 rounded-full bg-[var(--effect-color)]" />
+                                <h2 class="text-md font-medium text-center">Neeraj Walia
+                                    <div class="text-xs font-thin">I'm a full stack developer</div>
+                                </h2>
+                                <div
+                                    class="text-center text-xs font-light text-[var(--color-info)] shadow rounded-md shadow-lg bg-[var(--bg-container-primary)] w-[768px] p-4">
+                                    Lorem ipsum dolor sit amet
+                                    consectetur adipisicing elit. Magnam
+                                    explicabo exercitationem deserunt rem, reiciendis repellat delectus corrupti quasi!
+                                    Modi voluptatibus deleniti cum dolor quidem harum, ab fuga ipsam. Sunt, nemo?</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="flex flex-col gap-4 items-center justify-center">
+                                <img src="./assets/profile.png"
+                                    class="h-16 w-16 rounded-full bg-[var(--bg-secondary)]" />
+                                <h2 class="text-md font-medium text-center">Neeraj Walia
+                                    <div class="text-xs font-thin">I'm a full stack developer</div>
+                                </h2>
+                                <div
+                                    class="text-center text-xs font-light text-[var(--color-info)] shadow rounded-md shadow-lg bg-[var(--bg-container-primary)] w-[768px] p-4">
+                                    Lorem ipsum dolor sit amet
+                                    consectetur adipisicing elit. Magnam
+                                    explicabo exercitationem deserunt rem, reiciendis repellat delectus corrupti quasi!
+                                    Modi voluptatibus deleniti cum dolor quidem harum, ab fuga ipsam. Sunt, nemo?</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Post -->
+        <section>
+            <h2 class="text-xl font-bold">Latest Posts</h2>
+            <div class="flex  flex-1 mt-6 gap-4 text-[var(--color-primary)]">
+                <div class="bg-[var(--bg-container-primary)] p-4 flex-1 rounded-md shadow-lg">
+                    <h2 class="text-lg font-bold">This is title</h2>
+                    <div class="">
+                        <span class="text-[var(--color-info)] text-xs font-light">28 February 2022</span>
+                        <span class="text-[var(--red)] text-sm"> <i class="uil uil-angle-right"></i> Ez</span>
+                    </div>
+                </div>
+                <div class="bg-[var(--bg-container-primary)] p-4 flex-1 rounded-md shadow-lg">
+                    <h2 class="text-lg font-bold">This is title</h2>
+                    <div class="">
+                        <span class="text-[var(--color-info)] text-xs font-light">28 February 2022</span>
+                        <span class="text-[var(--red)] text-sm"> <i class="uil uil-angle-right"></i> Ez</span>
+                    </div>
+                </div>
+                <div class="bg-[var(--bg-container-primary)] p-4 flex-1 rounded-md shadow-lg">
+                    <h2 class="text-lg font-bold">This is title</h2>
+                    <div class="">
+                        <span class="text-[var(--color-info)] text-xs font-light">28 February 2022</span>
+                        <span class="text-[var(--red)] text-sm"> <i class="uil uil-angle-right"></i> Ez</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Get in touch -->
+        <section>
+            <h2 class="text-xl font-bold">Get in touch</h2>
+            <div class="flex justify-center mt-6 gap-4 text-[var(--color-primary)]">
+                <form action="" class="flex gap-4 flex-col">
+                    <div class="flex gap-6">
+                        <input type="text" placeholder="Your name" class="rounded-full shadow-lg w-64 p-4 text-sm">
+                        <input type="text" placeholder="Your email" class="rounded-full shadow-lg w-64 p-4 text-sm">
+                    </div>
+                    <input type="text" placeholder="Subject" class="rounded-full shadow-lg w-[540px] p-4 text-sm">
+                    <div>
+                        <textarea type="text" placeholder="Message"
+                            class="rounded-full shadow-lg w-[540px] w-64 p-4 text-sm"></textarea>
+                    </div>
+                    <button class="text-[var(--color-secondary)] bg-[var(--red)] rounded-full p-4 ">Submit</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+
+    </div>
+    <section class="flex items-center mt-8 justify-center p-4 bg-[var(--bg-secondary)] text-[var(--color-secondary)]">
+        Thankyou
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+                dynamicBullets: true,
+            },
+        });
+    </script>
 </body>
 
 </html>
