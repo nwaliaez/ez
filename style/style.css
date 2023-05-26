@@ -15,10 +15,10 @@
     --purple: #5858e2;
 }
 
-.active-nav-link {
-    color: var(--effect-color);
-}
-
 html {
     scroll-behavior: smooth;
+}
+
+.active-nav-link {
+    color: var(--effect-color);
 }

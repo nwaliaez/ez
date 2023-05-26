@@ -5,7 +5,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./style/style.css" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
@@ -26,8 +25,10 @@
         class="flex sticky relative top-0 z-10 drop-shadow-lg justify-between items-center h-12 w-full bg-[var(--bg-secondary)] text-[var(--color-secondary)] border-b border-b-[var(--border-secondary)]">
         <div class="container mx-auto flex justify-between">
             <div class="">Ez</div>
-            <ul class="flex gap-8 text-xs text-[var(--color-secondary)]">
-                <li class="nav-items active-nav-link">Home</li>
+            <ul class="flex gap-8 text-xs text-[var(--color-secondary)] nav-links">
+                <a href="#home">
+                    <li class="nav-items active-nav-link">Home</li>
+                </a>
                 <a href="#aboutMe">
                     <li class="nav-items">About</li>
                 </a>
@@ -51,7 +52,7 @@
     </nav>
 
     <!-- Hero section -->
-    <section
+    <section id="home"
         class="h-96 flex flex-col gap-4 items-center justify-center bg-[var(--bg-secondary)] text-[var(--color-secondary)]">
         <img src="./assets/profile.png" class="h-16 w-16 rounded-full bg-[var(--effect-color)]" />
         <h2 class="text-2xl font-medium text-center w-60">
@@ -363,6 +364,8 @@
         Thankyou
     </section>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./script/script.js" defer></script>
     <script>
         var swiper = new Swiper(".mySwiper", {
             pagination: {
