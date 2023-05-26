@@ -42,20 +42,17 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     const menuIconSelector = document.querySelector('.open-menu');
+    const menuLink = document.querySelector('.menu-link');
+
     menuIconSelector.addEventListener('click', toggleMenu);
+    menuLink.addEventListener('click', toggleMenu);
 
-    window.addEventListener('click', function (event) {
-        var excludedElement = document.querySelector('.open-menu');
-        var clickedElement = event.target;
-
-        if (
-            clickedElement === excludedElement ||
-            excludedElement.contains(clickedElement)
-        ) {
-            return;
+    window.addEventListener('scroll', function (event) {
+        const menuSelector = document.querySelector('div[aria-label="menu"]');
+        if (menuSelector.classList.contains('translate-y-0')) {
+            menuSelector.classList.remove('translate-y-0');
+            menuSelector.classList.add('translate-y-52');
         }
-
-        toggleMenu();
     });
 
     // On scroll check active section
