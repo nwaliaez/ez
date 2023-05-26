@@ -21,11 +21,34 @@
 
 <body class="bg-[var(--bg-primary)] text-[var(--color-primary)]">
     <!-- NAV section -->
+    <div aria-label="menu"
+        class="z-30 grid transition grid-cols-3 md:hidden fixed translate-y-52 bottom-0 bg-[var(--bg-container-primary)] w-full items-center justify-center border-t border-t-[var(--border-secondary)] text-[var(--color-primary) text-sm">
+        <a href="#home" class="flex flex-col items-center justify-center py-4">
+            <i class="uil uil-estate"></i>
+            Home
+        </a>
+        <a href="#aboutMe" class="flex flex-col items-center justify-center py-4">
+            <i class="uil uil-notes"></i>About
+        </a>
+        <a href="#service" class="flex flex-col items-center justify-center py-4">
+            <i class="uil uil-cog"></i>Services
+        </a>
+        <a href="#experience" class="flex flex-col items-center justify-center py-4">
+            <i class="uil uil-flask-potion"></i>Experience
+        </a>
+        <a href="#works" class="flex flex-col items-center justify-center py-4">
+            <i class="uil uil-hard-hat"></i>Works
+        </a>
+        <a href="#contact" class="flex flex-col items-center justify-center py-4">
+            <i class="uil uil-at"></i>Contact
+        </a>
+    </div>
+
     <nav
         class="flex sticky relative top-0 z-10 drop-shadow-lg justify-between items-center h-12 w-full bg-[var(--bg-secondary)] text-[var(--color-secondary)] border-b border-b-[var(--border-secondary)]">
         <div class="container mx-auto flex justify-between">
             <div class=""><img src="./assets/logo.png" class="h-6 w-6"></div>
-            <ul class="flex gap-8 text-xs text-[var(--color-secondary)] nav-links">
+            <ul class="hidden md:flex gap-8 text-xs text-[var(--color-secondary)] nav-links">
                 <a href="#home">
                     <li class="nav-items active-nav-link">Home</li>
                 </a>
@@ -48,6 +71,7 @@
                     <li class="nav-items">Contact</li>
                 </a>
             </ul>
+            <i class="block md:hidden uil uil-bars pr-2 open-menu"></i>
         </div>
     </nav>
 
@@ -76,21 +100,24 @@
     </section>
 
     <!-- Container -->
-    <div class="flex flex-col container mx-auto">
+    <div class="flex flex-col container mx-auto p-4">
         <!-- About me -->
         <section class="flex flex-col gap-6 pt-16" id="aboutMe">
             <h2 class="text-xl font-bold">About Me</h2>
             <div class="flex gap-6">
-                <img src="./assets/profile.png" class="h-16 w-16 rounded-full bg-[var(--bg-secondary)]" />
+                <img src="./assets/profile.png"
+                    class="hidden md:block h-16 w-16 rounded-full bg-[var(--bg-secondary)]" />
                 <div
-                    class="grid grid-cols-3 shadow-lg bg-[var(--bg-container-primary)] rounded-lg text-[var(--color-info)] text-xs gap-6 p-6">
+                    class="grid grid-cols-1 md:grid-cols-3 shadow-lg bg-[var(--bg-container-primary)] rounded-lg text-[var(--color-info)] text-xs gap-6 p-6">
                     <div class="flex flex-1 col-span-1 justify-between flex-col">
                         <div>
                             Crafting captivating user interfaces using modern frameworks and libraries and
                             Architecting scalable and secure server-side systems;
-                            I am a seasoned software developer with expertise in front-end and back-end development, and
+                            I am a seasoned software developer with expertise in front-end and back-end development,
+                            and
                             Web3.
-                            To know more on my professional journey and my technical expertise, delve into the depths of
+                            To know more on my professional journey and my technical expertise, delve into the
+                            depths of
                             my comprehensive resume.
                         </div>
                         <div class="flex items-center mt-4">
@@ -103,7 +130,7 @@
                     </div>
 
                     <div class="flex flex-1 col-span-2">
-                        <div class="grid grid-cols-2 gap-2 w-full">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 w-full">
                             <div class="flex flex-col justify-start mb-2 gap-2">
                                 <div class="flex justify-between">
                                     <div>WEB3 - (Solidity, Hardhat, Mocha, ERC20, ERC721)</div>
@@ -160,7 +187,7 @@
         <!-- Services -->
         <section class="pt-16" id="services">
             <h2 class="text-xl font-bold">Services</h2>
-            <div class="flex mt-6 gap-4 text-[var(--color-secondary)]">
+            <div class="flex flex-col sm:flex-row mt-6 gap-4 text-[var(--color-secondary)]">
                 <div class="flex flex-col items-center justify-center flex-1 rounded-lg p-4 bg-[var(--purple)]">
                     <i class="uil uil-brush-alt text-6xl"></i>
                     <br />
@@ -188,7 +215,8 @@
                     </span>
                 </div>
             </div>
-            <span class="flex items-center justify-center text-xs mt-6 text-[var(--color-info)]">Looking for a custom
+            <span class="flex items-center justify-center text-xs mt-6 text-[var(--color-info)]">Looking for a
+                custom
                 solution?<a href="#contact"><span class="cursor-pointer text-[var(--red)]">&nbsp;Click
                         here&nbsp;</span></a>to contact
                 me!</span>
@@ -197,7 +225,7 @@
         <!-- Experience -->
         <section class="pt-16" id="experience">
             <h2 class="text-xl font-bold">Experience</h2>
-            <div class="flex mt-6 gap-4 text-[var(--color-primary)]">
+            <div class="flex flex-col md:flex-row mt-6 gap-4 text-[var(--color-primary)]">
                 <div class="flex flex-col flex-1 gap-2 bg-[var(--bg-container-primary)] rounded-lg shadow-lg p-6">
                     <div class="flex gap-6">
                         <div class="flex flex-col text-[var(--red)] items-center">
@@ -207,12 +235,15 @@
                         <div class="flex flex-col text-[var(--color-primary)] text-sm gap-2">
                             <div class="text-xs">May 2022 - Present</div>
                             <h2 class="text-lg font-bold">Technical lead - Yellow.ai</h2>
-                            Collaborate with customers, engineering managers, developers and business analysts to ensure
-                            timely and high-quality delivery of conversational channels that meet customer requirements.
+                            Collaborate with customers, engineering managers, developers and business analysts to
+                            ensure
+                            timely and high-quality delivery of conversational channels that meet customer
+                            requirements.
                             Integrate channels with various backend and frontend systems used by customers.
                             Design and develop custom chat and voice components, and optimize them for different
                             experiences for voice and chat.
-                            Leading cross-functional teams and rigorous code reviews to ensure the build is scalable,
+                            Leading cross-functional teams and rigorous code reviews to ensure the build is
+                            scalable,
                             maintainable, and performant.
                             Hands-on experience in API integration (REST/SOAP).
                             End to end automation process for a client, significantly reducing wait times from 24-48
@@ -231,7 +262,8 @@
                         <div class="flex flex-col text-sm gap-2">
                             <div class="text-xs">December 2021 - April 2022</div>
                             <h2 class="text-lg font-bold">Software Developer - Nuvento</h2>
-                            Effectively managed databases for AI chatbots and voicebots, ensuring seamless integration
+                            Effectively managed databases for AI chatbots and voicebots, ensuring seamless
+                            integration
                             and functionality
                             Led end-to-end development of chatbots and voicebots, from ideation to deployment and
                             maintenance.
@@ -250,11 +282,13 @@
                             <h2 class="text-lg font-bold">Web Developer - Afterdoor Solutions</h2>
                             Proficiently managed programming for databases and websites using tools, such as PHP,
                             codeigniter, and nodejs
-                            Conducted research on mysql database to optimize data fetching time through effective query
+                            Conducted research on mysql database to optimize data fetching time through effective
+                            query
                             development
                             Facilitated the training on internal web functions, empowering them to make changes
                             autonomously
-                            Successfully resolved website bugs, leading to notable improvements in web functionality and
+                            Successfully resolved website bugs, leading to notable improvements in web functionality
+                            and
                             speed.
 
                         </div>
@@ -298,7 +332,8 @@
                                 </h2>
                                 <div
                                     class="text-center text-xs font-light text-[var(--color-info)] shadow rounded-md shadow-lg bg-[var(--bg-container-primary)] w-[768px] p-4">
-                                    Asked myself to build an instagram clone and I am very satisfied by the work I did.
+                                    Asked myself to build an instagram clone and I am very satisfied by the work I
+                                    did.
                                 </div>
                             </div>
                         </div>
@@ -363,15 +398,17 @@
                 Nextjs13 or Nodejs with Mysql or Mongodb and nodemailer as well
             </h3>
             <div class="flex justify-center mt-6 gap-4 text-[var(--color-primary)]">
-                <form action="" class="flex gap-4 flex-col">
-                    <div class="flex gap-6">
-                        <input type="text" placeholder="Your name" class="rounded-full shadow-lg w-64 p-4 text-sm" />
-                        <input type="text" placeholder="Your email" class="rounded-full shadow-lg w-64 p-4 text-sm" />
+                <form action="" class="flex container gap-4 flex-col">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <input type="text" placeholder="Your name"
+                            class="rounded-full shadow-lg w-full md:w-64 p-4 text-sm" />
+                        <input type="text" placeholder="Your email"
+                            class="rounded-full shadow-lg w-full md:w-64 p-4 text-sm" />
                     </div>
-                    <input type="text" placeholder="Subject" class="rounded-full shadow-lg w-[540px] p-4 text-sm" />
+                    <input type="text" placeholder="Subject" class="rounded-full shadow-lg w-full p-4 text-sm" />
                     <div>
                         <textarea type="text" placeholder="Message"
-                            class="rounded-full shadow-lg w-[540px] w-64 p-4 text-sm"></textarea>
+                            class="rounded-full shadow-lg w-full w-64 p-4 text-sm"></textarea>
                     </div>
                     <button class="text-[var(--color-secondary)] bg-[var(--red)] rounded-full p-4">
                         Submit
