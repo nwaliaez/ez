@@ -2,38 +2,50 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./style/style.css">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./style/swiper.css">
+    <link rel="stylesheet" href="./style/swiper.css" />
     <title>Neeraj Walia - Portfolio</title>
     <style type="text/tailwindcss">
         @layer utilities {
-            .nav-items {
-                @apply cursor-pointer;
-            }
+        .nav-items {
+          @apply cursor-pointer;
         }
+      }
     </style>
 </head>
 
 <body class="bg-[var(--bg-primary)] text-[var(--color-primary)]">
     <!-- NAV section -->
     <nav
-        class="flex justify-between items-center h-12 w-full bg-[var(--bg-secondary)] text-[var(--color-secondary)] border-b border-b-[var(--border-secondary)]">
+        class="flex sticky relative top-0 z-10 drop-shadow-lg justify-between items-center h-12 w-full bg-[var(--bg-secondary)] text-[var(--color-secondary)] border-b border-b-[var(--border-secondary)]">
         <div class="container mx-auto flex justify-between">
             <div class="">Ez</div>
             <ul class="flex gap-8 text-xs text-[var(--color-secondary)]">
                 <li class="nav-items active-nav-link">Home</li>
-                <li class="nav-items">About</li>
-                <li class="nav-items">Services</li>
-                <li class="nav-items">Experience</li>
-                <li class="nav-items">Works</li>
-                <li class="nav-items">Blog</li>
-                <li class="nav-items">Contact</li>
+                <a href="#aboutMe">
+                    <li class="nav-items">About</li>
+                </a>
+                <a href="#services">
+                    <li class="nav-items">Services</li>
+                </a>
+                <a href="#experience">
+                    <li class="nav-items">Experience</li>
+                </a>
+                <a href="#works">
+                    <li class="nav-items">Works</li>
+                </a>
+                <a href="#blog">
+                    <li class="nav-items">Blog</li>
+                </a>
+                <a href="#contact">
+                    <li class="nav-items">Contact</li>
+                </a>
             </ul>
         </div>
     </nav>
@@ -42,22 +54,30 @@
     <section
         class="h-96 flex flex-col gap-4 items-center justify-center bg-[var(--bg-secondary)] text-[var(--color-secondary)]">
         <img src="./assets/profile.png" class="h-16 w-16 rounded-full bg-[var(--effect-color)]" />
-        <h2 class="text-2xl font-medium">Neeraj Walia
-            <div class="text-xs font-thin">I'm a full stack developer</div>
+        <h2 class="text-2xl font-medium text-center w-60">
+            Neeraj Walia
+            <div class="text-xs font-thin">
+                I am a full stack developer - I harmonize the realms of front-end
+                finesse and back-end wizardry, to create immersive experiences!
+            </div>
         </h2>
         <div class="flex gap-4">
-            <i class="uil uil-instagram cursor-pointer"></i>
-            <i class="uil uil-twitter-alt cursor-pointer"></i>
-            <i class="uil uil-github-alt cursor-pointer"></i>
+            <a href="https://github.com/nwaliaez">
+                <i class="uil uil-github-alt cursor-pointer"></i></a>
+            <a href="https://www.linkedin.com/in/ezforme/">
+                <i class="uil uil-linkedin-alt cursor-pointer"></i></a>
+            <a href="https://twitter.com/nwaliaez">
+                <i class="uil uil-twitter-alt cursor-pointer"></i></a>
         </div>
-        <button class="text-sm rounded-full py-2 px-4 bg-[var(--red)]">Hire Me</button>
+        <button class="text-sm rounded-full py-2 px-4 bg-[var(--red)]">
+            Let's innovate together!
+        </button>
     </section>
 
     <!-- Container -->
-    <div class="flex flex-col gap-14 container mx-auto">
-
+    <div class="flex flex-col container mx-auto">
         <!-- About me -->
-        <section class="flex flex-col gap-6 mt-10">
+        <section class="flex flex-col gap-6 pt-16" id="aboutMe">
             <h2 class="text-xl font-bold">About Me</h2>
             <div class="flex gap-6">
                 <img src="./assets/profile.png" class="h-16 w-16 rounded-full bg-[var(--bg-secondary)]" />
@@ -65,14 +85,18 @@
                     class="flex-1 shadow-lg flex bg-[var(--bg-container-primary)] rounded-lg text-[var(--color-info)] text-xs gap-6 p-6">
                     <div class="flex flex-1 justify-between flex-col">
                         <div>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sequi et reprehenderit,
-                            natus,
-                            mollitia consequuntur debitis, placeat sunt sed voluptates ad fugit expedita eius id iste
-                            doloribus delectus nemo quae!
+                            Crafting captivating user interfaces using modern frameworks and libraries and
+                            Architecting scalable and secure server-side systems;
+                            I am a seasoned software developer with expertise in front-end and back-end development, and
+                            Web3.
+                            To know more on my professional journey and my technical expertise, delve into the depths of
+                            my comprehensive resume.
                         </div>
                         <div class="flex items-center mt-4">
                             <a href="./assets/csv.pdf" download="NeerajWalia.pdf">
-                                <button class="rounded-full text-white py-2 px-4 bg-[var(--red)]">Download CV</button>
+                                <button class="rounded-full text-white py-2 px-4 bg-[var(--red)]">
+                                    Download Resume
+                                </button>
                             </a>
                         </div>
                     </div>
@@ -84,7 +108,7 @@
                                     <div>HTML</div>
                                     <div>85%</div>
                                 </div>
-                                <div class=" bg-gray-300 h-2 rounded-full">
+                                <div class="bg-gray-300 h-2 rounded-full">
                                     <div class="bg-[var(--yellow)] h-full rounded-full w-[85%]"></div>
                                 </div>
                             </div>
@@ -93,7 +117,7 @@
                                     <div>CSS</div>
                                     <div>90%</div>
                                 </div>
-                                <div class=" bg-gray-300 h-2 rounded-full">
+                                <div class="bg-gray-300 h-2 rounded-full">
                                     <div class="bg-[var(--red)] h-full rounded-full w-[90%]"></div>
                                 </div>
                             </div>
@@ -102,86 +126,94 @@
                                     <div>HTML</div>
                                     <div>85%</div>
                                 </div>
-                                <div class=" bg-gray-300 h-2 rounded-full">
+                                <div class="bg-gray-300 h-2 rounded-full">
                                     <div class="bg-[var(--purple)] h-full rounded-full w-[85%]"></div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
-
             </div>
         </section>
 
         <!-- Services -->
-        <section>
+        <section class="pt-16" id="services">
             <h2 class="text-xl font-bold">Services</h2>
             <div class="flex mt-6 gap-4 text-[var(--color-secondary)]">
                 <div class="flex flex-col items-center justify-center flex-1 rounded-lg p-4 bg-[var(--purple)]">
                     <i class="uil uil-brush-alt text-6xl"></i>
-                    <br>
+                    <br />
                     <h3 class="text-lg font-bold">UI/UX design</h3>
                     <span class="text-xs leading-6 text-center">
-                        Lorem ipsum dolor
-                        sit amet consectetur adipisicing elit. Aliquam aut nisi delectus optio quos maiores obcaecati
+                        Crafting digital experiences that mesmerize and delight
                     </span>
                 </div>
                 <div
                     class="flex flex-col items-center justify-center flex-1 rounded-lg p-4 bg-[var(--yellow)] text-[var(--color-primary)]">
                     <i class="uil uil-window text-6xl"></i>
-                    <br>
+                    <br />
                     <h3 class="text-lg font-bold">Web Development</h3>
                     <span class="text-xs leading-6 text-center">
-                        Lorem ipsum dolor
-                        sit amet consectetur adipisicing elit. Aliquam aut nisi delectus optio quos maiores obcaecati
+                        Building digital landscapes with code, where ideas come to life
                     </span>
                 </div>
                 <div class="flex flex-col items-center justify-center flex-1 rounded-lg p-4 bg-[var(--red)]">
                     <i class="uil uil-bitcoin text-6xl"></i>
-                    <br>
+                    <br />
                     <h3 class="text-lg font-bold">Blockchain</h3>
                     <span class="text-xs leading-6 text-center">
-                        Lorem ipsum dolor
-                        sit amet consectetur adipisicing elit. Aliquam aut nisi delectus optio quos maiores
-                        obcaecati
+                        Unleashing the power of decentralized trust to revolutionize how we secure, transact,
+                        and collaborate in the digital realm.
                     </span>
                 </div>
             </div>
             <span class="flex items-center justify-center text-xs mt-6 text-[var(--color-info)]">Looking for a custom
-                job?<span class="cursor-pointer text-[var(--red)]">&nbsp;Click here&nbsp;</span>to contact
+                solution?<span class="cursor-pointer text-[var(--red)]">&nbsp;Click here&nbsp;</span>to contact
                 me!</span>
         </section>
 
         <!-- Experience -->
-        <section>
+        <section class="pt-16" id="experience">
             <h2 class="text-xl font-bold">Experience</h2>
             <div class="flex mt-6 gap-4 text-[var(--color-primary)]">
                 <div class="flex flex-col flex-1 gap-2 bg-[var(--bg-container-primary)] rounded-lg shadow-lg p-6">
                     <div class="flex gap-6">
                         <div class="flex flex-col text-[var(--red)] items-center">
-                            <i class="uil uil-graduation-cap"></i>
+                            <i class="uil uil-window"></i>
                             <div class="h-32 w-[0.5px] bg-[var(--red)]"></div>
                         </div>
                         <div class="flex flex-col text-[var(--color-primary)] text-sm gap-2">
-                            <div class="text-xs">2019 - present</div>
-                            <h2 class="text-lg font-bold">Academic Degree</h2>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem earum odio nobis
-                            ullam doloremque, voluptates ducimus ea, quis neque consequatur velit quaerat maiores
-                            sapiente quia unde sequi. Quisquam, tenetur unde!
+                            <div class="text-xs">May 2022 - Present</div>
+                            <h2 class="text-lg font-bold">Technical lead - Yellow.ai</h2>
+                            Collaborate with customers, engineering managers, developers and business analysts to ensure
+                            timely and high-quality delivery of conversational channels that meet customer requirements.
+                            Integrate channels with various backend and frontend systems used by customers.
+                            Design and develop custom chat and voice components, and optimize them for different
+                            experiences for voice and chat.
+                            Leading cross-functional teams and rigorous code reviews to ensure the build is scalable,
+                            maintainable, and performant.
+                            Hands-on experience in API integration (REST/SOAP).
+                            End to end automation process for a client, significantly reducing wait times from 24-48
+                            hours to receive a document to an almost instant receipt of the document via a voice
+                            assistant with a containment rate of 79%
+
                         </div>
                     </div>
                     <div class="flex gap-6">
                         <div class="flex flex-col text-[var(--red)] items-center">
-                            <i class="uil uil-graduation-cap"></i>
+                            <i class="uil uil-window"></i>
                             <div class="h-32 w-[0.5px] bg-[var(--red)]"></div>
                         </div>
                         <div class="flex flex-col text-sm gap-2">
-                            <div class="text-xs">2019 - present</div>
-                            <h2 class="text-lg font-bold">Academic Degree</h2>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem earum odio nobis
-                            ullam doloremque, voluptates ducimus ea, quis neque consequatur velit quaerat maiores
-                            sapiente quia unde sequi. Quisquam, tenetur unde!
+                            <div class="text-xs">December 2021 - April 2022</div>
+                            <h2 class="text-lg font-bold">Software Developer - Nuvento</h2>
+                            Effectively managed databases for AI chatbots and voicebots, ensuring seamless integration
+                            and functionality
+                            Led end-to-end development of chatbots and voicebots, from ideation to deployment and
+                            maintenance.
+                            Provided comprehensive training to junior web developers, empowering them to make
+                            independent updates and changes to internal web functions.
+
                         </div>
                     </div>
                 </div>
@@ -192,32 +224,24 @@
                             <div class="h-32 w-[0.5px] bg-[var(--red)]"></div>
                         </div>
                         <div class="flex flex-col text-sm gap-2">
-                            <div class="text-xs">2019 - present</div>
-                            <h2 class="text-lg font-bold">Web Developer</h2>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem earum odio nobis
-                            ullam doloremque, voluptates ducimus ea, quis neque consequatur velit quaerat maiores
-                            sapiente quia unde sequi. Quisquam, tenetur unde!
+                            <div class="text-xs">March 2019 - November 2019</div>
+                            <h2 class="text-lg font-bold">Web Developer - Afterdoor Solutions</h2>
+                            Proficiently managed programming for databases and websites using tools, such as PHP,
+                            codeigniter, and nodejs
+                            Conducted research on mysql database to optimize data fetching time through effective query
+                            development
+                            Facilitated the training on internal web functions, empowering them to make changes
+                            autonomously
+                            Successfully resolved website bugs, leading to notable improvements in web functionality and
+                            speed.
+
                         </div>
                     </div>
-                    <div class="flex gap-6">
-                        <div class="flex flex-col text-[var(--red)] items-center">
-                            <i class="uil uil-window"></i>
-                            <div class="h-32 w-[0.5px] bg-[var(--red)]"></div>
-                        </div>
-                        <div class="flex flex-col text-sm gap-2">
-                            <div class="text-xs">2019 - present</div>
-                            <h2 class="text-lg font-bold">Web Developer</h2>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem earum odio nobis
-                            ullam doloremque, voluptates ducimus ea, quis neque consequatur velit quaerat maiores
-                            sapiente quia unde sequi. Quisquam, tenetur unde!
-                        </div>
-                    </div>
-                </div>
-            </div>
+
         </section>
 
         <!-- Recent Works -->
-        <section>
+        <section class="pt-16" id="works">
             <h2 class="text-xl font-bold">Recent Works</h2>
             <div class="flex mt-6 gap-4 text-[var(--color-primary)]">
                 <div class="grid w-full grid-cols-4 gap-4">
@@ -232,7 +256,7 @@
         </section>
 
         <!-- Client Reviews -->
-        <section>
+        <section class="pt-16">
             <h2 class="text-xl font-bold">Clients & Reviews</h2>
             <div class="flex mt-6 gap-4 text-[var(--color-primary)]">
                 <div class="swiper mySwiper">
@@ -241,30 +265,38 @@
                             <div class="flex flex-col gap-4 items-center justify-center">
                                 <img src="./assets/profile.png"
                                     class="h-16 w-16 rounded-full bg-[var(--effect-color)]" />
-                                <h2 class="text-md font-medium text-center">Neeraj Walia
-                                    <div class="text-xs font-thin">I'm a full stack developer</div>
+                                <h2 class="text-md font-medium text-center">
+                                    Neeraj Walia
+                                    <div class="text-xs font-thin">
+                                        I'm a full stack developer
+                                    </div>
                                 </h2>
                                 <div
                                     class="text-center text-xs font-light text-[var(--color-info)] shadow rounded-md shadow-lg bg-[var(--bg-container-primary)] w-[768px] p-4">
-                                    Lorem ipsum dolor sit amet
-                                    consectetur adipisicing elit. Magnam
-                                    explicabo exercitationem deserunt rem, reiciendis repellat delectus corrupti quasi!
-                                    Modi voluptatibus deleniti cum dolor quidem harum, ab fuga ipsam. Sunt, nemo?</div>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Magnam explicabo exercitationem deserunt rem, reiciendis
+                                    repellat delectus corrupti quasi! Modi voluptatibus deleniti
+                                    cum dolor quidem harum, ab fuga ipsam. Sunt, nemo?
+                                </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="flex flex-col gap-4 items-center justify-center">
                                 <img src="./assets/profile.png"
                                     class="h-16 w-16 rounded-full bg-[var(--bg-secondary)]" />
-                                <h2 class="text-md font-medium text-center">Neeraj Walia
-                                    <div class="text-xs font-thin">I'm a full stack developer</div>
+                                <h2 class="text-md font-medium text-center">
+                                    Neeraj Walia
+                                    <div class="text-xs font-thin">
+                                        I'm a full stack developer
+                                    </div>
                                 </h2>
                                 <div
                                     class="text-center text-xs font-light text-[var(--color-info)] shadow rounded-md shadow-lg bg-[var(--bg-container-primary)] w-[768px] p-4">
-                                    Lorem ipsum dolor sit amet
-                                    consectetur adipisicing elit. Magnam
-                                    explicabo exercitationem deserunt rem, reiciendis repellat delectus corrupti quasi!
-                                    Modi voluptatibus deleniti cum dolor quidem harum, ab fuga ipsam. Sunt, nemo?</div>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Magnam explicabo exercitationem deserunt rem, reiciendis
+                                    repellat delectus corrupti quasi! Modi voluptatibus deleniti
+                                    cum dolor quidem harum, ab fuga ipsam. Sunt, nemo?
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -274,54 +306,58 @@
         </section>
 
         <!-- Latest Post -->
-        <section>
+        <section class="pt-16" id="blog">
             <h2 class="text-xl font-bold">Latest Posts</h2>
-            <div class="flex  flex-1 mt-6 gap-4 text-[var(--color-primary)]">
+            <div class="flex flex-1 mt-6 gap-4 text-[var(--color-primary)]">
                 <div class="bg-[var(--bg-container-primary)] p-4 flex-1 rounded-md shadow-lg">
                     <h2 class="text-lg font-bold">This is title</h2>
                     <div class="">
                         <span class="text-[var(--color-info)] text-xs font-light">28 February 2022</span>
-                        <span class="text-[var(--red)] text-sm"> <i class="uil uil-angle-right"></i> Ez</span>
+                        <span class="text-[var(--red)] text-sm">
+                            <i class="uil uil-angle-right"></i> Ez</span>
                     </div>
                 </div>
                 <div class="bg-[var(--bg-container-primary)] p-4 flex-1 rounded-md shadow-lg">
                     <h2 class="text-lg font-bold">This is title</h2>
                     <div class="">
                         <span class="text-[var(--color-info)] text-xs font-light">28 February 2022</span>
-                        <span class="text-[var(--red)] text-sm"> <i class="uil uil-angle-right"></i> Ez</span>
+                        <span class="text-[var(--red)] text-sm">
+                            <i class="uil uil-angle-right"></i> Ez</span>
                     </div>
                 </div>
                 <div class="bg-[var(--bg-container-primary)] p-4 flex-1 rounded-md shadow-lg">
                     <h2 class="text-lg font-bold">This is title</h2>
                     <div class="">
                         <span class="text-[var(--color-info)] text-xs font-light">28 February 2022</span>
-                        <span class="text-[var(--red)] text-sm"> <i class="uil uil-angle-right"></i> Ez</span>
+                        <span class="text-[var(--red)] text-sm">
+                            <i class="uil uil-angle-right"></i> Ez</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Get in touch -->
-        <section>
+        <section class="pt-16" id="contact">
             <h2 class="text-xl font-bold">Get in touch</h2>
             <div class="flex justify-center mt-6 gap-4 text-[var(--color-primary)]">
                 <form action="" class="flex gap-4 flex-col">
                     <div class="flex gap-6">
-                        <input type="text" placeholder="Your name" class="rounded-full shadow-lg w-64 p-4 text-sm">
-                        <input type="text" placeholder="Your email" class="rounded-full shadow-lg w-64 p-4 text-sm">
+                        <input type="text" placeholder="Your name" class="rounded-full shadow-lg w-64 p-4 text-sm" />
+                        <input type="text" placeholder="Your email" class="rounded-full shadow-lg w-64 p-4 text-sm" />
                     </div>
-                    <input type="text" placeholder="Subject" class="rounded-full shadow-lg w-[540px] p-4 text-sm">
+                    <input type="text" placeholder="Subject" class="rounded-full shadow-lg w-[540px] p-4 text-sm" />
                     <div>
                         <textarea type="text" placeholder="Message"
                             class="rounded-full shadow-lg w-[540px] w-64 p-4 text-sm"></textarea>
                     </div>
-                    <button class="text-[var(--color-secondary)] bg-[var(--red)] rounded-full p-4 ">Submit</button>
+                    <button class="text-[var(--color-secondary)] bg-[var(--red)] rounded-full p-4">
+                        Submit
+                    </button>
                 </form>
             </div>
         </section>
 
         <!-- Footer -->
-
     </div>
     <section class="flex items-center mt-8 justify-center p-4 bg-[var(--bg-secondary)] text-[var(--color-secondary)]">
         Thankyou

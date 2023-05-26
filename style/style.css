@@ -18,3 +18,7 @@
 .active-nav-link {
     color: var(--effect-color);
 }
+
+html {
+    scroll-behavior: smooth;
+}
