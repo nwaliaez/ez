@@ -18,14 +18,14 @@ document.addEventListener('DOMContentLoaded', function () {
         activeLink = navItem;
     };
 
-    const fragment = window.location.hash;
+    // const fragment = window.location.hash;
 
-    if (fragment) {
-        const targetNavItem = document.querySelector(
-            `a[href="${fragment}"] li`
-        );
-        setActiveNavLink(targetNavItem);
-    }
+    // if (fragment) {
+    //     const targetNavItem = document.querySelector(
+    //         `a[href="${fragment}"] li`
+    //     );
+    //     setActiveNavLink(targetNavItem);
+    // }
 
     // Mobile Menu
 
